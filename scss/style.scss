@@ -1,0 +1,101 @@
+$bg-color1: #FCF4ED;
+$bg-color2: #F0C7B2;
+$card-box-shadow: 0 4px 30px #979797;
+$btn-color:#D8D8D8;
+*{
+  box-sizing:border-box;
+}
+body{
+  height:100vh;//裝置高度的100%
+  background-image:linear-gradient(175deg,$bg-color1,$bg-color1 50%,$bg-color2 50%);
+  display:flex;//彈性布局
+  justify-content:center;//水平置中
+  align-items:center;//垂直置中
+}
+.card{
+  background-color:#fff;
+  padding-top:15px;
+  padding-bottom:15px;
+  height:512px;
+  width:780px;
+  box-shadow:$card-box-shadow;
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+}
+.brand-bg{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:445px;
+  
+  background-image:url(https://images.unsplash.com/photo-1550939810-cb345b2f4ad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2632&q=80);
+  background-size:527px 633px;
+  background-position:-41px -10px;
+  
+  clip-path:polygon(0 0, 339.05px 0,445px 100%,0% 100%);
+}
+.card-block{
+  margin-right:27px;
+  position:relative;
+  x-index:3;
+  width:318px;
+  display:flex;
+  flex-direction:column;
+  h1{
+  font-size:32px;
+  font-weight:bolder;
+  }
+  .card-header{
+    color:#AD5E36;
+    font-family:cursive;
+    font-weight:bold;
+  }
+  p{
+    font-size:16px;
+    margin-top:16px;
+    line-height: 20px;
+  }
+  .card-body{
+    margin-top:12px;
+    font-family:"STXihei","FangSong",cursive;
+    color:#6D7278;
+  }
+  .card-footer{
+      font-family:"STXihei";
+      font-weight:bold;
+      display:flex;
+      justify-content:flex-end;
+      margin-top:auto;//當使用flex排列需要空間，使用auto會自動將空間用空白補滿
+    }
+}
+
+.btn{
+  background-color:$btn-color;
+  border-style:solid;
+  border-width:1px;
+  border-color:#979797;
+  color:#000000;
+  width:292px;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  
+  &:hover,&:focus{
+    background-color:darken($btn-color,15%);
+  }
+}
+.sign-image{
+    margin-left:203px;
+    margin-top:16px;
+    // background-color:#AD5E36;
+    width:115px;
+    height:39px;
+    background-image:url(https://www.jendesstudio.com/front/assets/images/jenwu.png);
+    background-size:115px 39px;
+  }
+
+
